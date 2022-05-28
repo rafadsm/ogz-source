@@ -297,10 +297,10 @@ public:
 
 	u32 GetChecksum() { return m_nChecksum; }
 
-	static MMatchItemDescMgr DefaultInstance;
+	//static MMatchItemDescMgr DefaultInstance;
 };
 inline MMatchItemDescMgr* MGetMatchItemDescMgr() { return MMatchItemDescMgr::GetInstance(); }
-void MSetMatchItemDescMgr(MMatchItemDescMgr*);
+//void MSetMatchItemDescMgr(MMatchItemDescMgr*);
 
 
 

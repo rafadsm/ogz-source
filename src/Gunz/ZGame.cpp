@@ -536,7 +536,7 @@ void ZGame::Destroy()
 {
 	if (IsReplay())
 	{
-		MSetMatchItemDescMgr(&MMatchItemDescMgr::DefaultInstance);
+		//MSetMatchItemDescMgr(&MMatchItemDescMgr::DefaultInstance);
 	}
 
 	DestroyAllBots();

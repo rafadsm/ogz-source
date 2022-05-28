@@ -3,7 +3,7 @@ cmake_policy(SET CMP0015 NEW)
 
 link_directories(
 	../Gunz
-	../sdk/dx9/lib/x86
+	../sdk/dx9/lib/x64
 	../RealSound/Lib
 	../sdk/opus/lib/Release
 	../sdk/portaudio/lib/Release)
@@ -32,14 +32,13 @@ PUBLIC
 	../RealSound/Include
 	../MCountryFilter/Include
 	../sdk/rapidxml/include
-	${LIBSODIUM_INCLUDE_DIRS}
 	../sdk/opus/include
 	../sdk/portaudio/include
 INTERFACE
     .
 )
 
-find_library(fmodvc_path NAMES fmodvc PATHS .)
+find_library(fmodvc_path NAMES fmodvc64 PATHS .)
 
 target_link_libraries(Gunz_lib PUBLIC
     msvcrt.lib
@@ -48,7 +47,6 @@ target_link_libraries(Gunz_lib PUBLIC
 	winmm.lib
 	${ZLIB_LIBRARY}
 	${fmodvc_path}
-	sodium
 	opus
 	bullet
     portaudio

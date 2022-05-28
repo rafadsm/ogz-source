@@ -164,6 +164,8 @@ ReplayVersionItems DGItems      {"system/dg_zitem.xml"};
 
 bool SetReplayVersionItems(ReplayVersion Version)
 {
+	return true;
+	/*
 	ReplayVersionItems* rvi;
 	if (Version.Server == ServerType::Official)
 		rvi = &OfficialItems;
@@ -186,7 +188,7 @@ bool SetReplayVersionItems(ReplayVersion Version)
 		return false;
 
 	MSetMatchItemDescMgr(&rvi->ItemDescMgr);
-	return true;
+	return true;*/
 }
 
 static bool LoadReplayData(ZReplayLoader& Loader, const char* filename)

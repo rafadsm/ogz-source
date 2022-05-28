@@ -9,9 +9,7 @@ add_target(NAME cml TYPE STATIC SOURCES "${src}")
 target_include_directories(cml PUBLIC
 	.
 	Include
-	${ZLIB_INCLUDE_DIR}
-	${OPENSSL_INCLUDE_DIR}
-	../sdk/curl/include
+	../sdk/zlib/include
 	../sdk/rapidxml/include
 	../sdk/rapidjson/include
 )
@@ -30,7 +28,5 @@ endif()
 
 
 target_link_libraries(cml PUBLIC
-	${ZLIB_LIBRARY}
-	${OPENSSL_LIBRARIES}
-	curl
+	zlib
 )

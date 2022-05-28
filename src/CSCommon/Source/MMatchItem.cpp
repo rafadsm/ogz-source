@@ -564,20 +564,22 @@ void MMatchItemDescMgr::ParseItem(MXmlElement& element)
 	}
 #endif
 
-	insert(value_type(pNewDesc->m_nID, pNewDesc));
+	insert({ pNewDesc->m_nID, pNewDesc });
 }
 
-MMatchItemDescMgr MMatchItemDescMgr::DefaultInstance;
-static MMatchItemDescMgr* CurrentMatchItemDescMgr = &MMatchItemDescMgr::DefaultInstance;
+//MMatchItemDescMgr MMatchItemDescMgr::DefaultInstance;
+//static MMatchItemDescMgr* CurrentMatchItemDescMgr = &MMatchItemDescMgr::DefaultInstance;
 
 MMatchItemDescMgr* MMatchItemDescMgr::GetInstance()
 {
-	return CurrentMatchItemDescMgr;
+	static MMatchItemDescMgr m_ItemDescMgr;
+	return &m_ItemDescMgr;
+	//return CurrentMatchItemDescMgr;
 }
 
 void MSetMatchItemDescMgr(MMatchItemDescMgr* New)
 {
-	CurrentMatchItemDescMgr = New;
+	//CurrentMatchItemDescMgr = New;
 }
 
 

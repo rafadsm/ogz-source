@@ -13,8 +13,6 @@ target_include_directories(RealSound PUBLIC
 	../sdk/dx9/include
 	../sdk/rapidxml/include
 	../sdk/rapidjson/include
-	../sdk/curl/include
-	${OPENSSL_INCLUDE_DIR}
 	${ZLIB_INCLUDE_DIR}
 	../sdk/libzip/lib
 
